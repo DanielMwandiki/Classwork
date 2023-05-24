@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<style>
+			ul {
+				display: none;
+			}
+			.show {
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<span id="menu">▶  Sweeties (click me)!</span>
+		<ul>
+			<li>Cake</li>
+			<li>Donut</li>
+			<li>Honey</li>
+		</ul>
+		<script>
+			var menu = document.getElementById('menu');
+			var list = document.querySelector('ul');
+
+			menu.addEventListener('click', function() {
+				if (list.classList.contains('show')) {
+					list.classList.remove('show');
+					menu.textContent = '▶  Sweeties (click me)!';
+				} else {
+					list.classList.add('show');
+					menu.textContent = '▼ Sweeties (click me)!';
+				}
+			});
+		</script>
+	</body>
+</html>
